@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './react_minesweeper.jsx',
+    entry: './frontend/index.jsx',
     output: {
         filename: './app/assets/javascripts/bundle.js',
     },

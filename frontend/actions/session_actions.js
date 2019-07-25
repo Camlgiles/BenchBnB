@@ -23,7 +23,7 @@ const receiveErrors = errors => ({
 export const signup = formUser => dispatch => (ApiUtil.signUp(formUser)
     .then(user => dispatch(receiveCurrentUser(user))));
 
-export const login = formUser => dispatch => (ApiUtil.logIn(formuser)
+export const login = formUser => dispatch => (ApiUtil.logIn(formUser)
     .then(user => dispatch(receiveCurrentUser(user))));
 
 export const logout = () => dispatch => (ApiUtil.logOut()

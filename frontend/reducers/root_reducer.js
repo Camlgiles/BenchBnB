@@ -11,4 +11,4 @@ const rootReducer = combineReducers({
     errors: errorsReducer
 });
 
-export default errorsReducer;
+export default rootReducer;

@@ -9,10 +9,10 @@ class Api::SessionsController < ApplicationController
         # Render :new if invalid credentials (give the user another chance to login)
         if @user.nil?
         #   flash.now[:errors] = ['Invalid email or password.']
-        render json: 'No User Found'
+            render json: 'No User Found'
         else
         # Log them in and redirect them if we find them
-        login!(@user)
+            login!(@user)
         #   redirect_to user_url(@user)
         end
 
@@ -22,10 +22,9 @@ class Api::SessionsController < ApplicationController
         if currnet_user.nil?
             # flash.now[:errors] = ['404 no user to log out']
             render :json => 'Not Found', :status => 404
-        end
-        logout!
-        render "{}"
-        
+        else
+            logout!
+            render "{}"
         end
     end
 

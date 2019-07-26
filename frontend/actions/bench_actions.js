@@ -9,6 +9,7 @@ import * as APIUtil from '../util/bench_api_util';
 })
 
 export const fetchBenches = () => dispatch => {
+  // debugger
   return APIUtil.fetchBenches()
     .then( benches => dispatch(receiveBenches(benches)))
 }

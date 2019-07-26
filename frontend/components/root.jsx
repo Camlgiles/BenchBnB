@@ -12,7 +12,6 @@ const Root = ({ store }) => (
             <h1>Hello from root.jsx</h1>
             <ul>
                 <li><App /></li>
-    
             </ul>
         </HashRouter>
     </Provider>

@@ -5,8 +5,10 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS"
 
 const receiveCurrentUser = user => ({
-    type: RECEIVE_CURRENT_USER,
-    user
+    // debugger 
+        type: RECEIVE_CURRENT_USER,
+        user
+    
 });
 
 const logoutCurrentUser = () => ({
@@ -20,14 +22,14 @@ const receiveErrors = errors => ({
 });
 
 
-export const signup = formUser => dispatch => (ApiUtil.signUp(formUser)
-    .then(user => dispatch(receiveCurrentUser(user))));
+export const signup = formUser => dispatch => ApiUtil.signUp(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)));
 
-export const login = formUser => dispatch => (ApiUtil.logIn(formUser)
-    .then(user => dispatch(receiveCurrentUser(user))));
+export const logIn = formUser => dispatch => ApiUtil.logIn(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)));
 
-export const logout = () => dispatch => (ApiUtil.logOut()
-    .then(() => dispatch(logoutCurrentUser())));
+export const logout = () => dispatch => ApiUtil.logOut()
+    .then(() => dispatch(logoutCurrentUser()));
 
 // rootpage(rootcomponent(doesnt have url)-> render ->(formlogin / logout)->(submithandler) -> .ajax rquest to the back -> backrouter -> controller -> model 
 //  database -> model -> contorller -> fronted store -> reducer 

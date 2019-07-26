@@ -3,10 +3,10 @@ import {merge} from 'lodash';
 
 export const UsersReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    debugger;
+    // debugger;
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return merge({}, oldState, {[action.user.id]: action.user});
+            return merge({}, oldState, {[action.user.id]: action.user.email});
         default: 
             return oldState;
     }

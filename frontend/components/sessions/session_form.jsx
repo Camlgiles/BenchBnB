@@ -7,17 +7,21 @@ class SessionForm extends React.Component {
             email: "",
             password: ""
         };
+        // debugger
 
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleInput = this.handleInput.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        // debugger;
         this.props.processForm(user);
     }
 
     handleInput(type) {
+        // debugger 
         return (e) => {
             this.setState({ [type]: e.target.value })
         }

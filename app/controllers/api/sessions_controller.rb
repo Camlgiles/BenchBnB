@@ -3,17 +3,16 @@ class Api::SessionsController < ApplicationController
     
 
     def create
-        # Find user by credentials
+       
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
-        # Flash errors, if any.
-        # Render :new if invalid credentials (give the user another chance to login)
+     
         if @user.nil?
-        #   flash.now[:errors] = ['Invalid email or password.']
+       
             render json: 'No User Found'
         else
-        # Log them in and redirect them if we find them
+        
             login!(@user)
-        #   redirect_to user_url(@user)
+            render json: { email: @user.email, id: @user.id}
         end
 
     end

@@ -4,6 +4,7 @@ import App from './App';
 import {Provider} from 'react-redux';
 import GreetingContainer from './greeting/greeting_container';
 
+
 const Root = ({ store }) => (
     <Provider store={store}>
         <HashRouter>

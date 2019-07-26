@@ -17,7 +17,8 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         // debugger;
-        this.props.processForm(user);
+        this.props.processForm(user)
+            .then(() => this.props.history.push('/'));  //redirecting to log out
     }
 
     handleInput(type) {

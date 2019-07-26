@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
         else
         
             login!(@user)
-            render json: { email: @user.email, id: @user.id}
+            render "api/isers/show"
         end
 
     end

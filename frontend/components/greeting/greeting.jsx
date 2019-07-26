@@ -5,7 +5,7 @@ export default ({ currentUser, logOut }) => {
     // debugger
     const display = currentUser ? (
         <div>
-            <h3>Welcome {currentUser}</h3>
+            <h3>Welcome {currentUser.email}</h3>
             <button onClick={logOut}>Logout</button>
         </div>
     ) : (

@@ -9,7 +9,6 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login!(@user)
-      puts @user
       render json: 'Creation Successful'
     else
       # Tell the user that something went wrong. Let them try again.

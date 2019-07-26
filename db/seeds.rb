@@ -5,3 +5,414 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+benches = [{
+  "description": "Cottonwood",
+  "lat": 41.2096885,
+  "lng": -7.7780329
+}, {
+  "description": "Hooker",
+  "lat": 0.0090686,
+  "lng": 103.5089907
+}, {
+  "description": "Londonderry",
+  "lat": 15.4687838,
+  "lng": 43.5462744
+}, {
+  "description": "Dawn",
+  "lat": -9.635569,
+  "lng": 119.413498
+}, {
+  "description": "Trailsway",
+  "lat": 55.1506212,
+  "lng": 82.8518405
+}, {
+  "description": "Dapin",
+  "lat": 52.6424878,
+  "lng": 20.9312946
+}, {
+  "description": "Farwell",
+  "lat": 58.7239855,
+  "lng": 59.4504627
+}, {
+  "description": "Johnson",
+  "lat": 19.3851705,
+  "lng": -99.1837453
+}, {
+  "description": "Cottonwood",
+  "lat": 15.2525945,
+  "lng": 44.0270562
+}, {
+  "description": "Kingsford",
+  "lat": -28.3833642,
+  "lng": -53.929557
+}, {
+  "description": "Green",
+  "lat": 57.7498282,
+  "lng": 12.9277839
+}, {
+  "description": "Vermont",
+  "lat": 4.2399992,
+  "lng": 13.4482868
+}, {
+  "description": "Ohio",
+  "lat": 21.4677045,
+  "lng": 105.1492869
+}, {
+  "description": "La Follette",
+  "lat": 38.93,
+  "lng": -77.4
+}, {
+  "description": "Shelley",
+  "lat": 5.8700491,
+  "lng": -57.1492443
+}, {
+  "description": "Towne",
+  "lat": 3.1523104,
+  "lng": 101.7178316
+}, {
+  "description": "East",
+  "lat": 40.6307451,
+  "lng": -74.1181234
+}, {
+  "description": "Hayes",
+  "lat": 57.7040021,
+  "lng": 11.9696406
+}, {
+  "description": "Trailsway",
+  "lat": -12.73574,
+  "lng": -72.614288
+}, {
+  "description": "Swallow",
+  "lat": 56.654278,
+  "lng": 90.5782439
+}, {
+  "description": "Browning",
+  "lat": -23.4209995,
+  "lng": -51.9330558
+}, {
+  "description": "Cottonwood",
+  "lat": -8.4765241,
+  "lng": 115.5325797
+}, {
+  "description": "Lukken",
+  "lat": 53.291512,
+  "lng": -6.133718
+}, {
+  "description": "Myrtle",
+  "lat": "51.6561",
+  "lng": "35.9314"
+}, {
+  "description": "Emmet",
+  "lat": -24.9250707,
+  "lng": 27.6170798
+}, {
+  "description": "Sachs",
+  "lat": -6.2608384,
+  "lng": 106.8207875
+}, {
+  "description": "Haas",
+  "lat": 41.5225612,
+  "lng": 45.0430369
+}, {
+  "description": "Doe Crossing",
+  "lat": -10.9162769,
+  "lng": -37.0520889
+}, {
+  "description": "Corscot",
+  "lat": 45.5632781,
+  "lng": 13.769491
+}, {
+  "description": "Graceland",
+  "lat": 51.1625615,
+  "lng": 54.9809527
+}, {
+  "description": "Roth",
+  "lat": 37.5910109,
+  "lng": 70.5577283
+}, {
+  "description": "Darwin",
+  "lat": 56.1747912,
+  "lng": 14.756367
+}, {
+  "description": "Golf View",
+  "lat": 32.035776,
+  "lng": 35.038365
+}, {
+  "description": "Cottonwood",
+  "lat": 50.6657079,
+  "lng": 18.0732903
+}, {
+  "description": "Glacier Hill",
+  "lat": -7.3090831,
+  "lng": 108.8511448
+}, {
+  "description": "Nevada",
+  "lat": 59.2648646,
+  "lng": 15.2289108
+}, {
+  "description": "Jenifer",
+  "lat": 57.8593919,
+  "lng": 12.4331389
+}, {
+  "description": "East",
+  "lat": 9.1526728,
+  "lng": 105.1960795
+}, {
+  "description": "Thompson",
+  "lat": 41.3275459,
+  "lng": 19.8186982
+}, {
+  "description": "Kennedy",
+  "lat": 50.1837815,
+  "lng": 33.6817424
+}, {
+  "description": "Hazelcrest",
+  "lat": 15.1805822,
+  "lng": 102.2575235
+}, {
+  "description": "Stuart",
+  "lat": 63.827461,
+  "lng": 20.2599325
+}, {
+  "description": "Chive",
+  "lat": 35.2488461,
+  "lng": 118.3106107
+}, {
+  "description": "South",
+  "lat": 37.464539,
+  "lng": 121.447852
+}, {
+  "description": "Corben",
+  "lat": 14.8305973,
+  "lng": 120.9723263
+}, {
+  "description": "Mockingbird",
+  "lat": 18.5058296,
+  "lng": -70.3051347
+}, {
+  "description": "Myrtle",
+  "lat": "-8.7867",
+  "lng": "121.1256"
+}, {
+  "description": "Blue Bill Park",
+  "lat": 14.5686384,
+  "lng": -88.8694951
+}, {
+  "description": "Marquette",
+  "lat": -17.543301,
+  "lng": -70.017471
+}, {
+  "description": "Hermina",
+  "lat": -25.790615,
+  "lng": 28.3323137
+}, {
+  "description": "Thackeray",
+  "lat": 22.3744371,
+  "lng": 31.602771
+}, {
+  "description": "Redwing",
+  "lat": 12.309606,
+  "lng": 121.92404
+}, {
+  "description": "Farragut",
+  "lat": 31.058765,
+  "lng": 121.315718
+}, {
+  "description": "Fair Oaks",
+  "lat": 51.1811979,
+  "lng": 16.4883489
+}, {
+  "description": "Westend",
+  "lat": -17.1023219,
+  "lng": 49.1221414
+}, {
+  "description": "Dwight",
+  "lat": 45.6001616,
+  "lng": 17.8741663
+}, {
+  "description": "Towne",
+  "lat": -1.6196441,
+  "lng": 13.6015463
+}, {
+  "description": "Dawn",
+  "lat": 48.2441219,
+  "lng": 28.2765218
+}, {
+  "description": "Clyde Gallagher",
+  "lat": 44.780865,
+  "lng": 128.447649
+}, {
+  "description": "Goodland",
+  "lat": 53.3323703,
+  "lng": -6.2152673
+}, {
+  "description": "Meadow Ridge",
+  "lat": 51.598282,
+  "lng": -0.198414
+}, {
+  "description": "Fordem",
+  "lat": 8.0335995,
+  "lng": 2.4851463
+}, {
+  "description": "Judy",
+  "lat": 15.66085,
+  "lng": 120.769358
+}, {
+  "description": "Ridgeview",
+  "lat": -7.6184408,
+  "lng": 110.8072159
+}, {
+  "description": "Waywood",
+  "lat": 41.4000931,
+  "lng": -8.1459112
+}, {
+  "description": "Village",
+  "lat": 47.9956173,
+  "lng": 0.1924459
+}, {
+  "description": "Truax",
+  "lat": -17.3697902,
+  "lng": -48.9605972
+}, {
+  "description": "Birchwood",
+  "lat": -9.9925241,
+  "lng": 124.5694514
+}, {
+  "description": "Crescent Oaks",
+  "lat": 23.284628,
+  "lng": 116.268675
+}, {
+  "description": "Dwight",
+  "lat": 30.453667,
+  "lng": 114.872199
+}, {
+  "description": "Holmberg",
+  "lat": 55.6774662,
+  "lng": 12.5834168
+}, {
+  "description": "Fremont",
+  "lat": -7.6492089,
+  "lng": 111.4395128
+}, {
+  "description": "Tony",
+  "lat": 50.4119089,
+  "lng": 16.5148115
+}, {
+  "description": "Spohn",
+  "lat": 42.284605,
+  "lng": 125.744735
+}, {
+  "description": "Waywood",
+  "lat": 39.7306375,
+  "lng": -8.7036302
+}, {
+  "description": "Canary",
+  "lat": 8.4584521,
+  "lng": 125.0679195
+}, {
+  "description": "Pleasure",
+  "lat": 50.1617318,
+  "lng": 16.9473457
+}, {
+  "description": "Dottie",
+  "lat": 45.052484,
+  "lng": 4.8398662
+}, {
+  "description": "Cherokee",
+  "lat": 49.8545281,
+  "lng": 18.6057328
+}, {
+  "description": "Wayridge",
+  "lat": 29.181201,
+  "lng": 110.138102
+}, {
+  "description": "Merchant",
+  "lat": 55.4928171,
+  "lng": 45.6316463
+}, {
+  "description": "Dahle",
+  "lat": -34.6795558,
+  "lng": -58.5577501
+}, {
+  "description": "Fallview",
+  "lat": 32.768821,
+  "lng": 120.679703
+}, {
+  "description": "Schurz",
+  "lat": 41.4548181,
+  "lng": -8.2493359
+}, {
+  "description": "Ramsey",
+  "lat": -9.7451212,
+  "lng": 124.6082018
+}, {
+  "description": "Waywood",
+  "lat": 59.2420906,
+  "lng": 18.1015207
+}, {
+  "description": "Emmet",
+  "lat": 38.7554084,
+  "lng": -9.3408903
+}, {
+  "description": "Portage",
+  "lat": 40.4749958,
+  "lng": 22.9587865
+}, {
+  "description": "Bonner",
+  "lat": 7.444229,
+  "lng": 123.33769
+}, {
+  "description": "Ronald Regan",
+  "lat": -12.4,
+  "lng": -74.7
+}, {
+  "description": "Rigney",
+  "lat": 39.886547,
+  "lng": 116.989574
+}, {
+  "description": "Magdeline",
+  "lat": 50.6170721,
+  "lng": 23.6993741
+}, {
+  "description": "Merchant",
+  "lat": 52.3636588,
+  "lng": 4.9355226
+}, {
+  "description": "Sutherland",
+  "lat": "-8.2135",
+  "lng": "124.539"
+}, {
+  "description": "Helena",
+  "lat": -7.7514362,
+  "lng": 110.4162931
+}, {
+  "description": "Thompson",
+  "lat": 57.708657,
+  "lng": 12.0447568
+}, {
+  "description": "Becker",
+  "lat": "-7.3559",
+  "lng": "107.8034"
+}, {
+  "description": "Florence",
+  "lat": 38.914003,
+  "lng": 121.614682
+}, {
+  "description": "Basil",
+  "lat": "-10.6631",
+  "lng": "123.1415"
+}, {
+  "description": "Declaration",
+  "lat": 31.859964,
+  "lng": 120.411393
+}]
+benches.each do |bench|
+
+  Bench.create({
+    description: bench[:description],
+     lat: bench[:lat],
+     lng: bench[:lng]})
+
+end

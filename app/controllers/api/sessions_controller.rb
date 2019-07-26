@@ -12,18 +12,18 @@ class Api::SessionsController < ApplicationController
         else
         
             login!(@user)
-            render "api/isers/show"
+            render "api/users/show"
         end
 
     end
 
     def destroy
-        if currnet_user.nil?
-            # flash.now[:errors] = ['404 no user to log out']
-            render :json => 'Not Found', :status => 404
-        else
+        @user = current_user
+        if @user 
             logout!
-            render "{}"
+            render "api/users/show"
+        else 
+            render json:['nobody signed in'], status: 404
         end
     end
 
